@@ -510,7 +510,7 @@
       <span class="lang-en">Kindly respond by August 5, 2026</span>
       <span class="lang-it">Si richiede gentile conferma entro il 5 Agosto 2026</span>
     </p>
-    <form class="rsvp__form" id="rsvpForm">
+    <form class="rsvp__form" id="rsvpForm" action="https://formspree.io/f/xkopjvan" method="POST">
       <div class="form__group">
         <label for="rsvpName">
           <span class="lang-en">Full Name</span>
@@ -705,14 +705,6 @@
     positionWreath();
     window.addEventListener('resize', positionWreath);
 
-    /* ---- RSVP form (placeholder) ---- */
-    document.getElementById('rsvpForm').addEventListener('submit', e => {
-      e.preventDefault();
-      const lang = document.documentElement.getAttribute('data-lang') || 'en';
-      alert(lang === 'it'
-        ? 'Grazie! Il tuo RSVP è stato ricevuto.'
-        : 'Thank you! Your RSVP has been received.');
-    });
   </script>
 
 </body>
