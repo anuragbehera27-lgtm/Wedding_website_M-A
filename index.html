@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marta & Anurag — Wedding</title>
+  <link rel="stylesheet" href="Styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Josefin+Sans:wght@300;400;500;600&family=Dancing+Script:wght@400;500;600;700&family=Fleur+De+Leah&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#home" class="nav__logo">
+        <span class="nav__logo-a">M</span>
+        <span class="nav__ampersand">&amp;</span>
+        <span class="nav__logo-m">A</span>
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#story"><span class="lang-en">Our Story</span><span class="lang-it">La Nostra Storia</span></a></li>
+        <li><a href="#details"><span class="lang-en">Details</span><span class="lang-it">Dettagli</span></a></li>
+        <li><a href="#schedule"><span class="lang-en">Schedule</span><span class="lang-it">Programma</span></a></li>
+        <li><a href="#travel"><span class="lang-en">Travel</span><span class="lang-it">Come Arrivare</span></a></li>
+        <li><a href="#registry"><span class="lang-en">Registry</span><span class="lang-it">Lista Nozze</span></a></li>
+        <li><a href="#rsvp">RSVP</a></li>
+        <li>
+          <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+            <span class="lang-toggle__opt lang-toggle__opt--en">EN</span>
+            <span class="lang-toggle__slash">/</span>
+            <span class="lang-toggle__opt lang-toggle__opt--it">IT</span>
+          </button>
+        </li>
+      </ul>
+      <!-- Separate mobile-visible lang toggle -->
+      <button class="lang-toggle lang-toggle--mobile" id="langToggleMobile" aria-label="Switch language">
+        <span class="lang-toggle__opt lang-toggle__opt--en">EN</span>
+        <span class="lang-toggle__slash">/</span>
+        <span class="lang-toggle__opt lang-toggle__opt--it">IT</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="home">
+    <!-- SVG wreath inspired by the invitation's wildflower oval frame -->
+    <div class="hero__wreath" aria-hidden="true" id="heroWreath">
+      <img src="flower.png" alt="" class="hero__wreath-svg" style="mix-blend-mode:multiply; opacity:0.5;">
+    </div>
+
+    <div class="hero__content">
+      <p class="hero__subtitle fade-up">
+        <span class="lang-en">Together with their families</span>
+        <span class="lang-it">Insieme alle loro famiglie</span>
+      </p>
+      <h1 class="hero__title fade-up delay-1">
+        <span class="hero__name hero__name--first">Marta</span>
+        <span class="hero__ampersand">&amp;</span>
+        <span class="hero__name hero__name--second">Anurag</span>
+      </h1>
+      <div class="hero__divider fade-up delay-2">
+        <svg viewBox="0 0 120 20" xmlns="http://www.w3.org/2000/svg" class="hero__divider-svg">
+          <circle cx="30" cy="10" r="3" fill="#C4B3D4" opacity="0.5"/>
+          <circle cx="50" cy="8" r="4" fill="#E8C8C8" opacity="0.45"/>
+          <circle cx="60" cy="10" r="2.5" fill="#F0E08A" opacity="0.45"/>
+          <circle cx="70" cy="8" r="4" fill="#C4B3D4" opacity="0.45"/>
+          <circle cx="90" cy="10" r="3" fill="#E8C8C8" opacity="0.5"/>
+          <ellipse cx="40" cy="14" rx="6" ry="2" fill="#B8C5A0" opacity="0.35" transform="rotate(-20 40 14)"/>
+          <ellipse cx="80" cy="14" rx="6" ry="2" fill="#B8C5A0" opacity="0.35" transform="rotate(20 80 14)"/>
+        </svg>
+      </div>
+      <p class="hero__announcement fade-up delay-2">
+        <span class="lang-en">Joyfully announce their wedding</span>
+        <span class="lang-it">Annunciano con gioia il loro matrimonio</span>
+      </p>
+      <p class="hero__date fade-up delay-3">
+        <span class="lang-en">Saturday, September 5, 2026 &middot; 4 PM</span>
+        <span class="lang-it">Sabato 5 Settembre 2026 &middot; ore 16</span>
+      </p>
+      <p class="hero__venue fade-up delay-3">Agriturismo da Pippo &middot; Piazza Grassi 3, Cassignanica &ndash; MI</p>
+    </div>
+    <div class="hero__scroll">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===================== COUNTDOWN ===================== -->
+  <section class="countdown" id="countdown">
+    <p class="countdown__label">
+      <span class="lang-en">Days until we say "I do"</span>
+      <span class="lang-it">Giorni prima del "Sì, lo voglio"</span>
+    </p>
+    <div class="countdown__timer" id="countdownTimer">
+      <div class="countdown__block">
+        <span class="countdown__number" id="cdDays">000</span>
+        <span class="countdown__unit">
+          <span class="lang-en">Days</span><span class="lang-it">Giorni</span>
+        </span>
+      </div>
+      <div class="countdown__sep">&middot;</div>
+      <div class="countdown__block">
+        <span class="countdown__number" id="cdHours">00</span>
+        <span class="countdown__unit">
+          <span class="lang-en">Hours</span><span class="lang-it">Ore</span>
+        </span>
+      </div>
+      <div class="countdown__sep">&middot;</div>
+      <div class="countdown__block">
+        <span class="countdown__number" id="cdMins">00</span>
+        <span class="countdown__unit">
+          <span class="lang-en">Minutes</span><span class="lang-it">Minuti</span>
+        </span>
+      </div>
+      <div class="countdown__sep">&middot;</div>
+      <div class="countdown__block">
+        <span class="countdown__number" id="cdSecs">00</span>
+        <span class="countdown__unit">
+          <span class="lang-en">Seconds</span><span class="lang-it">Secondi</span>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== OUR STORY ===================== -->
+  <section class="story" id="story">
+    <div class="section-header">
+      <span class="section-header__tag">
+        <span class="lang-en">Our Story</span>
+        <span class="lang-it">La Nostra Storia</span>
+      </span>
+      <h2 class="section-header__title">
+        <span class="lang-en">How It All Began</span>
+        <span class="lang-it">Come Tutto è Iniziato</span>
+      </h2>
+    </div>
+    <div class="story__content">
+      <div class="story__image-col reveal-left">
+        <div class="story__image-frame">
+          <div class="story__image-placeholder">
+            <span>Your Photo Here</span>
+          </div>
+        </div>
+      </div>
+      <div class="story__text-col reveal-right">
+        <p class="story__lead">
+          <span class="lang-en">It started with a chance meeting at a friend's dinner party in the autumn of 2021.</span>
+          <span class="lang-it">Tutto è iniziato con un incontro casuale a una cena tra amici nell'autunno del 2021.</span>
+        </p>
+        <p>
+          <span class="lang-en">James was telling a terrible joke about sourdough starters when Sarah laughed — not at the joke, but at the commitment it implied. That evening turned into a late-night walk along the South Bank, which turned into brunch the next morning, which turned into something neither of them expected.</span>
+          <span class="lang-it">James stava raccontando una battuta terribile sul lievito madre quando Sarah rise — non per la battuta, ma per la dedizione che implicava. Quella serata si trasformò in una passeggiata notturna lungo il South Bank, poi in un brunch la mattina dopo, e poi in qualcosa che nessuno dei due si aspettava.</span>
+        </p>
+        <p>
+          <span class="lang-en">Four years, two adopted cats, and one spectacular sunset proposal on the Amalfi Coast later, they're ready to make it official — surrounded by the people who matter most.</span>
+          <span class="lang-it">Quattro anni, due gatti adottati e una spettacolare proposta al tramonto sulla Costiera Amalfitana dopo, sono pronti a rendere tutto ufficiale — circondati dalle persone che contano di più.</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="story__timeline">
+      <div class="timeline__line"></div>
+      <div class="timeline__item reveal-up">
+        <div class="timeline__dot"></div>
+        <div class="timeline__date">
+          <span class="lang-en">Oct 2021</span><span class="lang-it">Ott 2021</span>
+        </div>
+        <div class="timeline__text">
+          <span class="lang-en">First met at Sophie's dinner party</span>
+          <span class="lang-it">Primo incontro alla cena di Sophie</span>
+        </div>
+      </div>
+      <div class="timeline__item reveal-up">
+        <div class="timeline__dot"></div>
+        <div class="timeline__date">
+          <span class="lang-en">Dec 2021</span><span class="lang-it">Dic 2021</span>
+        </div>
+        <div class="timeline__text">
+          <span class="lang-en">Official first date — Borough Market</span>
+          <span class="lang-it">Primo appuntamento ufficiale — Borough Market</span>
+        </div>
+      </div>
+      <div class="timeline__item reveal-up">
+        <div class="timeline__dot"></div>
+        <div class="timeline__date">
+          <span class="lang-en">Jun 2023</span><span class="lang-it">Giu 2023</span>
+        </div>
+        <div class="timeline__text">
+          <span class="lang-en">Moved in together in Dulwich</span>
+          <span class="lang-it">Andati a vivere insieme a Dulwich</span>
+        </div>
+      </div>
+      <div class="timeline__item reveal-up">
+        <div class="timeline__dot"></div>
+        <div class="timeline__date">
+          <span class="lang-en">Aug 2025</span><span class="lang-it">Ago 2025</span>
+        </div>
+        <div class="timeline__text">
+          <span class="lang-en">The proposal — Positano at sunset</span>
+          <span class="lang-it">La proposta — Positano al tramonto</span>
+        </div>
+      </div>
+      <div class="timeline__item reveal-up">
+        <div class="timeline__dot"></div>
+        <div class="timeline__date">
+          <span class="lang-en">Sep 2026</span><span class="lang-it">Set 2026</span>
+        </div>
+        <div class="timeline__text">
+          <span class="lang-en">The wedding!</span>
+          <span class="lang-it">Il Matrimonio!</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PHOTO STRIP ===================== -->
+  <section class="photo-strip">
+    <div class="photo-strip__inner">
+      <div class="photo-strip__item"><div class="photo-strip__placeholder">Photo 1</div></div>
+      <div class="photo-strip__item"><div class="photo-strip__placeholder">Photo 2</div></div>
+      <div class="photo-strip__item"><div class="photo-strip__placeholder">Photo 3</div></div>
+      <div class="photo-strip__item"><div class="photo-strip__placeholder">Photo 4</div></div>
+    </div>
+  </section>
+
+  <!-- ===================== DETAILS ===================== -->
+  <section class="details" id="details">
+    <div class="section-header">
+      <span class="section-header__tag">
+        <span class="lang-en">The Details</span>
+        <span class="lang-it">I Dettagli</span>
+      </span>
+      <h2 class="section-header__title">
+        <span class="lang-en">When &amp; Where</span>
+        <span class="lang-it">Quando &amp; Dove</span>
+      </h2>
+    </div>
+    <div class="details__grid">
+      <div class="details__card reveal-up">
+        <div class="details__icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2">
+            <rect x="6" y="10" width="36" height="32" rx="3"/>
+            <path d="M6 20h36"/>
+            <path d="M16 6v8M32 6v8"/>
+          </svg>
+        </div>
+        <h3>
+          <span class="lang-en">Ceremony</span>
+          <span class="lang-it">Cerimonia</span>
+        </h3>
+        <p class="details__time">
+          <span class="lang-en">4:00 PM</span>
+          <span class="lang-it">Ore 16:00</span>
+        </p>
+        <p>Agriturismo da Pippo</p>
+        <p>Piazza Grassi 3, Cassignanica &ndash; MI</p>
+      </div>
+      <div class="details__card reveal-up">
+        <div class="details__icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2">
+            <circle cx="24" cy="24" r="18"/>
+            <path d="M24 14v10l7 7"/>
+          </svg>
+        </div>
+        <h3>
+          <span class="lang-en">Reception</span>
+          <span class="lang-it">Ricevimento</span>
+        </h3>
+        <p class="details__time">
+          <span class="lang-en">To follow</span>
+          <span class="lang-it">A seguire</span>
+        </p>
+        <p>Agriturismo da Pippo</p>
+        <p>
+          <span class="lang-en">Dinner, toasts &amp; dancing</span>
+          <span class="lang-it">Cena, brindisi e festa</span>
+        </p>
+      </div>
+      <div class="details__card reveal-up">
+        <div class="details__icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2">
+            <path d="M14 8 C14 8 10 16 10 22 C10 30 16 36 24 36 C32 36 38 30 38 22 C38 16 34 8 34 8"/>
+            <path d="M18 20 Q24 28 30 20" fill="none"/>
+            <circle cx="24" cy="16" r="3" fill="none"/>
+          </svg>
+        </div>
+        <h3>Dress Code</h3>
+        <p class="details__time">
+          <span class="lang-en">Semi-Formal</span>
+          <span class="lang-it">Elegante</span>
+        </p>
+        <p>Cocktail attire</p>
+        <p>
+          <span class="lang-en">Please avoid wearing white or ivory</span>
+          <span class="lang-it">Si prega di evitare il bianco e l'avorio</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SCHEDULE ===================== -->
+  <section class="schedule" id="schedule">
+    <div class="section-header section-header--light">
+      <span class="section-header__tag">
+        <span class="lang-en">The Day</span>
+        <span class="lang-it">La Giornata</span>
+      </span>
+      <h2 class="section-header__title">
+        <span class="lang-en">Schedule of Events</span>
+        <span class="lang-it">Programma</span>
+      </h2>
+    </div>
+    <div class="schedule__list">
+      <div class="schedule__item reveal-up">
+        <div class="schedule__time">
+          <span class="lang-en">3:30 PM</span><span class="lang-it">15:30</span>
+        </div>
+        <div class="schedule__dot"></div>
+        <div class="schedule__info">
+          <h4>
+            <span class="lang-en">Guest Arrival</span>
+            <span class="lang-it">Arrivo Ospiti</span>
+          </h4>
+          <p>
+            <span class="lang-en">Welcome drinks on the terrace</span>
+            <span class="lang-it">Benvenuto con aperitivo</span>
+          </p>
+        </div>
+      </div>
+      <div class="schedule__item reveal-up">
+        <div class="schedule__time">
+          <span class="lang-en">4:00 PM</span><span class="lang-it">16:00</span>
+        </div>
+        <div class="schedule__dot"></div>
+        <div class="schedule__info">
+          <h4>
+            <span class="lang-en">Ceremony</span>
+            <span class="lang-it">Cerimonia</span>
+          </h4>
+          <p>
+            <span class="lang-en">Exchange of vows</span>
+            <span class="lang-it">Scambio delle promesse</span>
+          </p>
+        </div>
+      </div>
+      <div class="schedule__item reveal-up">
+        <div class="schedule__time">
+          <span class="lang-en">5:00 PM</span><span class="lang-it">17:00</span>
+        </div>
+        <div class="schedule__dot"></div>
+        <div class="schedule__info">
+          <h4>
+            <span class="lang-en">Cocktail Hour</span>
+            <span class="lang-it">Aperitivo</span>
+          </h4>
+          <p>
+            <span class="lang-en">Canapés &amp; cocktails in the gardens</span>
+            <span class="lang-it">Cocktail e stuzzichini nel giardino</span>
+          </p>
+        </div>
+      </div>
+      <div class="schedule__item reveal-up">
+        <div class="schedule__time">
+          <span class="lang-en">7:00 PM</span><span class="lang-it">19:00</span>
+        </div>
+        <div class="schedule__dot"></div>
+        <div class="schedule__info">
+          <h4>
+            <span class="lang-en">Dinner</span>
+            <span class="lang-it">Cena</span>
+          </h4>
+          <p>
+            <span class="lang-en">Dinner &amp; speeches</span>
+            <span class="lang-it">Cena e discorsi</span>
+          </p>
+        </div>
+      </div>
+      <div class="schedule__item reveal-up">
+        <div class="schedule__time">
+          <span class="lang-en">9:30 PM</span><span class="lang-it">21:30</span>
+        </div>
+        <div class="schedule__dot"></div>
+        <div class="schedule__info">
+          <h4>
+            <span class="lang-en">First Dance</span>
+            <span class="lang-it">Primo Ballo</span>
+          </h4>
+          <p>
+            <span class="lang-en">The party begins!</span>
+            <span class="lang-it">Inizia la festa!</span>
+          </p>
+        </div>
+      </div>
+      <div class="schedule__item reveal-up">
+        <div class="schedule__time">
+          <span class="lang-en">12:00 AM</span><span class="lang-it">00:00</span>
+        </div>
+        <div class="schedule__dot"></div>
+        <div class="schedule__info">
+          <h4>
+            <span class="lang-en">Last Call &amp; Send-Off</span>
+            <span class="lang-it">Chiusura</span>
+          </h4>
+          <p>
+            <span class="lang-en">Send-off under the stars</span>
+            <span class="lang-it">Saluto finale sotto le stelle</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TRAVEL ===================== -->
+  <section class="travel" id="travel">
+    <div class="section-header">
+      <span class="section-header__tag">
+        <span class="lang-en">Getting There</span>
+        <span class="lang-it">Come Arrivare</span>
+      </span>
+      <h2 class="section-header__title">
+        <span class="lang-en">Travel &amp; Stay</span>
+        <span class="lang-it">Viaggio &amp; Soggiorno</span>
+      </h2>
+    </div>
+    <div class="travel__grid">
+      <div class="travel__card reveal-up">
+        <h3>
+          <span class="lang-en">Accommodation</span>
+          <span class="lang-it">Alloggio</span>
+        </h3>
+        <p>
+          <span class="lang-en"><strong>Unico Studios</strong><br>Via Marco Fabio Quintiliano 5, 20138 Milano MI</span>
+          <span class="lang-it"><strong>Unico Studios</strong><br>Via Marco Fabio Quintiliano 5, 20138 Milano MI</span>
+        </p>
+        <a href="https://maps.app.goo.gl/jkoLJpU7TUP2ECTg7" target="_blank" rel="noopener" class="btn btn--outline">
+          <span class="lang-en">View on Map</span><span class="lang-it">Vedi Mappa</span>
+        </a>
+      </div>
+      <div class="travel__card reveal-up">
+        <h3>
+          <span class="lang-en">Getting There</span>
+          <span class="lang-it">Come Arrivare</span>
+        </h3>
+        <p>
+          <span class="lang-en">Agriturismo da Pippo is located at <strong>Piazza Grassi 3, Cassignanica</strong>, easily reachable by car from Milan.</span>
+          <span class="lang-it">L'Agriturismo da Pippo si trova a <strong>Piazza Grassi 3, Cassignanica</strong>, facilmente raggiungibile in auto da Milano.</span>
+        </p>
+        <a href="https://maps.app.goo.gl/Eg91tX6UAyiNvFN59" target="_blank" rel="noopener" class="btn btn--outline">
+          <span class="lang-en">View Map</span><span class="lang-it">Vedi Mappa</span>
+        </a>
+      </div>
+      <div class="travel__card reveal-up">
+        <h3>
+          <span class="lang-en">Things to Do</span>
+          <span class="lang-it">Cosa Fare</span>
+        </h3>
+        <p>
+          <span class="lang-en">Arriving early or staying late? We've put together a list of our favourite spots in the area.</span>
+          <span class="lang-it">Arrivate presto o restate qualche giorno in più? Abbiamo raccolto i nostri posti preferiti della zona.</span>
+        </p>
+        <a href="#" class="btn btn--outline">
+          <span class="lang-en">Our Picks</span><span class="lang-it">I Nostri Consigli</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== REGISTRY ===================== -->
+  <section class="registry" id="registry">
+    <div class="registry__inner">
+      <div class="section-header section-header--light">
+        <span class="section-header__tag">
+          <span class="lang-en">Gifts</span>
+          <span class="lang-it">Regali</span>
+        </span>
+        <h2 class="section-header__title">
+          <span class="lang-en">Registry</span>
+          <span class="lang-it">Lista Nozze</span>
+        </h2>
+      </div>
+      <p class="registry__text">
+        <span class="lang-en">Your presence is the greatest gift of all. However, if you wish to honour us with a gift, we've registered at the following:</span>
+        <span class="lang-it">La vostra presenza è il regalo più grande. Tuttavia, se desiderate onorarci con un dono, ecco i nostri suggerimenti:</span>
+      </p>
+      <div class="registry__links">
+        <a href="#" class="btn btn--white">
+          <span class="lang-en">Gift Registry</span><span class="lang-it">Lista Nozze</span>
+        </a>
+        <a href="#" class="btn btn--white">
+          <span class="lang-en">Honeymoon Fund</span><span class="lang-it">Luna di Miele</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== RSVP ===================== -->
+  <section class="rsvp" id="rsvp">
+    <div class="section-header">
+      <span class="section-header__tag">
+        <span class="lang-en">Reply</span>
+        <span class="lang-it">Rispondi</span>
+      </span>
+      <h2 class="section-header__title">RSVP</h2>
+    </div>
+    <p class="rsvp__subtitle">
+      <span class="lang-en">Kindly respond by August 5, 2026</span>
+      <span class="lang-it">Si richiede gentile conferma entro il 5 Agosto 2026</span>
+    </p>
+    <form class="rsvp__form" id="rsvpForm">
+      <div class="form__group">
+        <label for="rsvpName">
+          <span class="lang-en">Full Name</span>
+          <span class="lang-it">Nome e Cognome</span>
+        </label>
+        <input type="text" id="rsvpName" name="name" required>
+      </div>
+      <div class="form__group">
+        <label for="rsvpEmail">Email</label>
+        <input type="email" id="rsvpEmail" name="email" required>
+      </div>
+      <div class="form__group">
+        <label>
+          <span class="lang-en">Will you be attending?</span>
+          <span class="lang-it">Parteciperai?</span>
+        </label>
+        <div class="form__radio-group">
+          <label class="form__radio">
+            <input type="radio" name="attending" value="yes" required>
+            <span>
+              <span class="lang-en">Joyfully Accepts</span>
+              <span class="lang-it">Con gioia, accetto</span>
+            </span>
+          </label>
+          <label class="form__radio">
+            <input type="radio" name="attending" value="no">
+            <span>
+              <span class="lang-en">Regretfully Declines</span>
+              <span class="lang-it">Purtroppo, declino</span>
+            </span>
+          </label>
+        </div>
+      </div>
+      <div class="form__group">
+        <label for="rsvpGuests">
+          <span class="lang-en">Number of Guests</span>
+          <span class="lang-it">Numero di Ospiti</span>
+        </label>
+        <select id="rsvpGuests" name="guests">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+      </div>
+      <div class="form__group">
+        <label for="rsvpDiet">
+          <span class="lang-en">Dietary Requirements</span>
+          <span class="lang-it">Esigenze Alimentari</span>
+        </label>
+        <textarea id="rsvpDiet" name="dietary" rows="3"></textarea>
+      </div>
+      <div class="form__group">
+        <label for="rsvpSong">
+          <span class="lang-en">Song Request</span>
+          <span class="lang-it">Richiesta Musicale</span>
+        </label>
+        <input type="text" id="rsvpSong" name="song">
+      </div>
+      <button type="submit" class="btn btn--primary">
+        <span class="lang-en">Send RSVP</span>
+        <span class="lang-it">Invia RSVP</span>
+      </button>
+    </form>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer__monogram">
+      <span class="footer__m-a">M</span>
+      <span class="footer__amp">&amp;</span>
+      <span class="footer__m-m">A</span>
+    </div>
+    <p class="footer__date">05 &middot; 09 &middot; 2026</p>
+    <p class="footer__hashtag">#MartaEAnurag2026</p>
+  </footer>
+
+  <script>
+    /* ---- Language toggle ---- */
+    function setLang(lang) {
+      document.documentElement.setAttribute('data-lang', lang);
+      document.documentElement.lang = lang === 'it' ? 'it' : 'en';
+      // Update placeholder text for form fields
+      const placeholders = {
+        rsvpName:  { en: 'Your name', it: 'Il tuo nome' },
+        rsvpEmail: { en: 'your@email.com', it: 'tua@email.com' },
+        rsvpDiet:  { en: 'Please let us know of any dietary needs', it: 'Facci sapere di eventuali esigenze alimentari' },
+        rsvpSong:  { en: 'What song gets you on the dance floor?', it: 'Quale canzone ti fa ballare?' }
+      };
+      for (const [id, texts] of Object.entries(placeholders)) {
+        const el = document.getElementById(id);
+        if (el) el.placeholder = texts[lang];
+      }
+      // Update active state on both toggles
+      document.querySelectorAll('.lang-toggle').forEach(btn => {
+        btn.querySelector('.lang-toggle__opt--en').classList.toggle('active', lang === 'en');
+        btn.querySelector('.lang-toggle__opt--it').classList.toggle('active', lang === 'it');
+      });
+      // Save preference
+      try { localStorage.setItem('weddingLang', lang); } catch(e) {}
+    }
+
+    // Bind both toggles
+    document.querySelectorAll('.lang-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const current = document.documentElement.getAttribute('data-lang') || 'en';
+        setLang(current === 'en' ? 'it' : 'en');
+      });
+    });
+
+    // Restore saved preference or detect browser language
+    (function() {
+      let saved;
+      try { saved = localStorage.getItem('weddingLang'); } catch(e) {}
+      if (saved) {
+        setLang(saved);
+      } else {
+        const browserLang = (navigator.language || '').substring(0, 2);
+        setLang(browserLang === 'it' ? 'it' : 'en');
+      }
+    })();
+
+    /* ---- Countdown ---- */
+    const weddingDate = new Date('2026-09-05T16:00:00').getTime();
+    function updateCountdown() {
+      const now = Date.now();
+      const diff = weddingDate - now;
+      if (diff <= 0) return;
+      const d = Math.floor(diff / 86400000);
+      const h = Math.floor((diff % 86400000) / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
+      document.getElementById('cdDays').textContent = String(d).padStart(3, '0');
+      document.getElementById('cdHours').textContent = String(h).padStart(2, '0');
+      document.getElementById('cdMins').textContent = String(m).padStart(2, '0');
+      document.getElementById('cdSecs').textContent = String(s).padStart(2, '0');
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    /* ---- Sticky nav on scroll ---- */
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('nav--scrolled', window.scrollY > 80);
+    });
+
+    /* ---- Mobile menu ---- */
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('active');
+      links.classList.toggle('open');
+    });
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      toggle.classList.remove('active');
+      links.classList.remove('open');
+    }));
+
+    /* ---- Smooth scroll ---- */
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    /* ---- Scroll reveal ---- */
+    const reveals = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right, .fade-up');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    reveals.forEach(el => observer.observe(el));
+
+
+    /* ---- Center wreath on title ---- */
+    function positionWreath() {
+      const wreath = document.getElementById('heroWreath');
+      const title = document.querySelector('.hero__title');
+      if (!wreath || !title) return;
+      const titleRect = title.getBoundingClientRect();
+      const heroRect = title.closest('.hero').getBoundingClientRect();
+      const titleCenterY = titleRect.top - heroRect.top + titleRect.height / 2 - 60;
+      wreath.style.top = titleCenterY + 'px';
+      wreath.style.transform = 'translate(-50%, -50%)';
+    }
+    positionWreath();
+    window.addEventListener('resize', positionWreath);
+
+    /* ---- RSVP form (placeholder) ---- */
+    document.getElementById('rsvpForm').addEventListener('submit', e => {
+      e.preventDefault();
+      const lang = document.documentElement.getAttribute('data-lang') || 'en';
+      alert(lang === 'it'
+        ? 'Grazie! Il tuo RSVP è stato ricevuto.'
+        : 'Thank you! Your RSVP has been received.');
+    });
+  </script>
+
+</body>
+</html>
