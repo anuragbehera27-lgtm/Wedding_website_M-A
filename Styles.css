@@ -256,19 +256,19 @@ ul { list-style: none; }
   letter-spacing: 2.3px;
   display: flex;
   align-items: baseline;
-  gap: 3px;
+  gap: 0px;
 }
 .nav__logo-a {
   color: var(--color-lavender-deep);
 }
 .nav__logo-m {
-  color: var(--color-pink);
+  color: var(--color-lavender-deep);
 }
 .nav__ampersand {
   font-family: 'Fleur De Leah', cursive;
-  font-size: 26px;
+  font-size: 32px;
   color: var(--color-sage);
-  margin: 0 2px;
+  margin: 0 -8px;
 }
 
 .nav__links {
@@ -398,7 +398,7 @@ ul { list-style: none; }
   font-family: 'Fleur De Leah', cursive;
   font-weight: 400;
   font-size: clamp(90px, 16vw, 150px);
-  color: var(--color-pink);
+  color: var(--color-sage);
   line-height: 0.8;
   margin: -28px 0;
 }
@@ -976,7 +976,7 @@ ul { list-style: none; }
   display: flex;
   align-items: baseline;
   justify-content: center;
-  gap: 6px;
+  gap: 0px;
   margin-bottom: 12px;
 }
 .footer__m-a {
@@ -984,11 +984,12 @@ ul { list-style: none; }
 }
 .footer__amp {
   font-family: 'Fleur De Leah', cursive;
-  font-size: 42px;
-  color: var(--color-pink);
+  font-size: 52px;
+  color: var(--color-sage);
+  margin: 0 -16px; 
 }
 .footer__m-m {
-  color: var(--color-pink);
+  color: var(--color-lavender-deep);
 }
 .footer__date {
   font-family: var(--font-body);
