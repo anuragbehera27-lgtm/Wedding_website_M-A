@@ -73,14 +73,12 @@
         <span class="hero__name hero__name--second">Anurag</span>
       </h1>
       <div class="hero__divider fade-up delay-2">
-        <svg viewBox="0 0 120 20" xmlns="http://www.w3.org/2000/svg" class="hero__divider-svg">
-          <circle cx="30" cy="10" r="3"   fill="#A990C2" opacity="0.55"/>
-          <circle cx="50" cy="8"  r="4"   fill="#D9A8A8" opacity="0.5"/>
-          <circle cx="60" cy="10" r="2.5" fill="#E8D29A" opacity="0.5"/>
-          <circle cx="70" cy="8"  r="4"   fill="#A990C2" opacity="0.5"/>
-          <circle cx="90" cy="10" r="3"   fill="#D9A8A8" opacity="0.55"/>
-          <ellipse cx="40" cy="14" rx="6" ry="2" fill="#A8B89A" opacity="0.4" transform="rotate(-20 40 14)"/>
-          <ellipse cx="80" cy="14" rx="6" ry="2" fill="#A8B89A" opacity="0.4" transform="rotate(20 80 14)"/>
+        <svg viewBox="0 0 260 12" xmlns="http://www.w3.org/2000/svg" class="hero__divider-svg">
+          <line x1="0"   y1="6" x2="108" y2="6" stroke="#DCD3E3" stroke-width="0.6"/>
+          <circle cx="116" cy="6" r="1.8" fill="#D9A8A8" opacity="0.55"/>
+          <circle cx="130" cy="6" r="2.8" fill="#A990C2" opacity="0.45"/>
+          <circle cx="144" cy="6" r="1.8" fill="#D9A8A8" opacity="0.55"/>
+          <line x1="152" y1="6" x2="260" y2="6" stroke="#DCD3E3" stroke-width="0.6"/>
         </svg>
       </div>
       <p class="hero__announcement fade-up delay-2">
@@ -462,8 +460,8 @@
           <span class="lang-it">Alloggio</span>
         </h3>
         <p>
-          <span class="lang-en"><strong>Unico Studios</strong><br>Via Marco Fabio Quintiliano 5, 20138 Milano MI</span>
-          <span class="lang-it"><strong>Unico Studios</strong><br>Via Marco Fabio Quintiliano 5, 20138 Milano MI</span>
+          <span class="lang-en">For guests travelling from outside Italy, we've reserved rooms at <strong>Unico Studios</strong> for the nights of <strong>4 &amp; 5 September</strong> — two nights, taken care of.</span>
+          <span class="lang-it">Per gli ospiti che vengono dall'estero, abbiamo riservato le camere presso <strong>Unico Studios</strong> per le notti del <strong>4 e 5 Settembre</strong> — due notti, già sistemate.</span>
         </p>
         <a href="https://maps.app.goo.gl/jkoLJpU7TUP2ECTg7" target="_blank" rel="noopener" class="btn btn--outline">
           <span class="lang-en">View on Map</span><span class="lang-it">Vedi Mappa</span>
@@ -475,8 +473,8 @@
           <span class="lang-it">Come Arrivare</span>
         </h3>
         <p>
-          <span class="lang-en">Agriturismo da Pippo is located at <strong>Piazza Grassi 3, Cassignanica</strong>, easily reachable by car from Milan.</span>
-          <span class="lang-it">L'Agriturismo da Pippo si trova a <strong>Piazza Grassi 3, Cassignanica</strong>, facilmente raggiungibile in auto da Milano.</span>
+          <span class="lang-en">Return transfers from <strong>Unico Studios</strong> to <strong>Agriturismo da Pippo</strong> will be arranged for guests staying at the hotel — just arrive, we'll handle the rest.</span>
+          <span class="lang-it">I trasferimenti di andata e ritorno da <strong>Unico Studios</strong> all'<strong>Agriturismo da Pippo</strong> saranno organizzati per gli ospiti alloggiati in hotel.</span>
         </p>
         <a href="https://maps.app.goo.gl/Eg91tX6UAyiNvFN59" target="_blank" rel="noopener" class="btn btn--outline">
           <span class="lang-en">View Map</span><span class="lang-it">Vedi Mappa</span>
@@ -502,26 +500,51 @@
   <section class="registry" id="registry">
     <div class="registry__inner">
       <div class="section-header section-header--light">
-        <span class="section-header__tag">
-          <span class="lang-en">Gifts</span>
-          <span class="lang-it">Regali</span>
-        </span>
         <h2 class="section-header__title">
           <span class="lang-en">Registry</span>
           <span class="lang-it">Lista Nozze</span>
         </h2>
       </div>
       <p class="registry__text">
-        <span class="lang-en">Your presence is the greatest gift of all. However, if you wish to honour us with a gift, we've registered at the following:</span>
-        <span class="lang-it">La vostra presenza è il regalo più grande. Tuttavia, se desiderate onorarci con un dono, ecco i nostri suggerimenti:</span>
+        <span class="lang-en">Your presence is the greatest gift of all. If you'd like to contribute a gift, a bank transfer is the easiest way — details below.</span>
+        <span class="lang-it">La vostra presenza è il regalo più grande. Se desiderate farci un dono, il bonifico bancario è il modo più semplice — i dettagli qui sotto.</span>
       </p>
       <div class="registry__links">
-        <a href="#" class="btn btn--white">
-          <span class="lang-en">Gift Registry</span><span class="lang-it">Lista Nozze</span>
-        </a>
-        <a href="#" class="btn btn--white">
-          <span class="lang-en">Honeymoon Fund</span><span class="lang-it">Luna di Miele</span>
-        </a>
+        <button class="btn btn--white" id="registryGiftBtn" aria-expanded="false">
+          <span class="lang-en">Gift Registry</span>
+          <span class="lang-it">Lista Nozze</span>
+        </button>
+      </div>
+
+      <div class="registry__iban-panel" id="registryIbanPanel">
+        <div class="registry__iban-cards">
+          <div class="registry__iban-card">
+            <p class="registry__iban-label">
+              <span class="lang-en">Guests in Italy</span>
+              <span class="lang-it">Ospiti in Italia</span>
+            </p>
+            <p class="registry__iban-name">Marta Zanoletti</p>
+            <p class="registry__iban-number" id="ibanIT">LT60 3250 0291 2312 1655</p>
+            <p class="registry__iban-bic">BIC: REVOLT21</p>
+            <button class="registry__iban-copy" data-target="ibanIT">
+              <span class="lang-en">Copy IBAN</span>
+              <span class="lang-it">Copia IBAN</span>
+            </button>
+          </div>
+          <div class="registry__iban-card">
+            <p class="registry__iban-label">
+              <span class="lang-en">Guests in the UK</span>
+              <span class="lang-it">Ospiti nel Regno Unito</span>
+            </p>
+            <p class="registry__iban-name">Anurag Behera</p>
+            <p class="registry__iban-number" id="ibanUK">GB59 REVO 0099 7047 8514 42</p>
+            <p class="registry__iban-bic">BIC: REVOGB21</p>
+            <button class="registry__iban-copy" data-target="ibanUK">
+              <span class="lang-en">Copy IBAN</span>
+              <span class="lang-it">Copia IBAN</span>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -655,6 +678,103 @@
           </p>
         </div>
       </form>
+    </div>
+  </section>
+
+  <!-- ===================== SUPPLIERS ===================== -->
+  <section class="suppliers" id="suppliers">
+    <div class="section-header">
+      <span class="section-header__tag">
+        <span class="lang-en">With Thanks</span>
+        <span class="lang-it">Con Gratitudine</span>
+      </span>
+      <h2 class="section-header__title">
+        <span class="lang-en">Our Suppliers</span>
+        <span class="lang-it">I Nostri Fornitori</span>
+      </h2>
+    </div>
+    <div class="suppliers__grid">
+
+      <div class="suppliers__card reveal-up">
+        <p class="suppliers__category"><span class="lang-en">Venue</span><span class="lang-it">Location</span></p>
+        <p class="suppliers__name"><a href="https://www.agriturismodapippo.it" target="_blank" rel="noopener">Agriturismo da Pippo</a></p>
+        <div class="suppliers__links">
+          <a href="https://www.agriturismodapippo.it" target="_blank" rel="noopener" class="suppliers__link" aria-label="Website"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a>
+          <a href="https://www.instagram.com/agriturismo.da.pippo" target="_blank" rel="noopener" class="suppliers__link" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+      </div>
+
+      <div class="suppliers__card reveal-up">
+        <p class="suppliers__category"><span class="lang-en">Photographer</span><span class="lang-it">Fotografo</span></p>
+        <p class="suppliers__name"><a href="https://www.simonearbasifotografia.com" target="_blank" rel="noopener">Simone Arbasi</a></p>
+        <div class="suppliers__links">
+          <a href="https://www.simonearbasifotografia.com" target="_blank" rel="noopener" class="suppliers__link" aria-label="Website"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a>
+          <a href="https://www.instagram.com/simonearbasifotografia" target="_blank" rel="noopener" class="suppliers__link" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+      </div>
+
+      <div class="suppliers__card reveal-up">
+        <p class="suppliers__category"><span class="lang-en">Florist</span><span class="lang-it">Fiorista</span></p>
+        <p class="suppliers__name"><a href="https://www.matrimonio.com/fiori-matrimonio/i-fiori-di-cristina--e152503" target="_blank" rel="noopener">I Fiori di Cristina</a></p>
+        <div class="suppliers__links">
+          <a href="https://www.matrimonio.com/fiori-matrimonio/i-fiori-di-cristina--e152503" target="_blank" rel="noopener" class="suppliers__link" aria-label="Website"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a>
+          <a href="https://www.instagram.com/ifioridicristina" target="_blank" rel="noopener" class="suppliers__link" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+      </div>
+
+      <div class="suppliers__card reveal-up">
+        <p class="suppliers__category"><span class="lang-en">Music</span><span class="lang-it">Musica</span></p>
+        <p class="suppliers__name"><a href="https://linktr.ee/encantoacousticduo" target="_blank" rel="noopener">Encanto Acoustic Duo</a></p>
+        <div class="suppliers__links">
+          <a href="https://linktr.ee/encantoacousticduo" target="_blank" rel="noopener" class="suppliers__link" aria-label="Website"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a>
+          <a href="https://www.instagram.com/encantoacousticwedding" target="_blank" rel="noopener" class="suppliers__link" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+      </div>
+
+      <div class="suppliers__card reveal-up">
+        <p class="suppliers__category"><span class="lang-en">Cake</span><span class="lang-it">Torta Nuziale</span></p>
+        <p class="suppliers__name"><a href="https://www.instagram.com/illaboratoriodibianca" target="_blank" rel="noopener">Il Laboratorio di Bianca</a></p>
+        <div class="suppliers__links">
+          <a href="https://www.instagram.com/illaboratoriodibianca" target="_blank" rel="noopener" class="suppliers__link" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+      </div>
+
+      <div class="suppliers__card reveal-up">
+        <p class="suppliers__category"><span class="lang-en">Graphics</span><span class="lang-it">Grafica</span></p>
+        <p class="suppliers__name"><a href="https://sweetpaperdesign.com" target="_blank" rel="noopener">Sweet Paper Design</a></p>
+        <div class="suppliers__links">
+          <a href="https://sweetpaperdesign.com" target="_blank" rel="noopener" class="suppliers__link" aria-label="Website"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a>
+          <a href="https://www.instagram.com/sweet_paper_design" target="_blank" rel="noopener" class="suppliers__link" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+      </div>
+
+      <div class="suppliers__card reveal-up">
+        <p class="suppliers__category"><span class="lang-en">Lights</span><span class="lang-it">Illuminazione</span></p>
+        <p class="suppliers__name"><a href="https://www.immagineluce.it" target="_blank" rel="noopener">Immagine Luce</a></p>
+        <div class="suppliers__links">
+          <a href="https://www.immagineluce.it" target="_blank" rel="noopener" class="suppliers__link" aria-label="Website"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a>
+          <a href="https://www.instagram.com/immagineluce" target="_blank" rel="noopener" class="suppliers__link" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+      </div>
+
+      <div class="suppliers__card reveal-up">
+        <p class="suppliers__category"><span class="lang-en">Wedding Gowns &amp; Suits</span><span class="lang-it">Abiti</span></p>
+        <p class="suppliers__name"><a href="http://www.arrigonisposi.com" target="_blank" rel="noopener">Arrigoni Sposi</a></p>
+        <div class="suppliers__links">
+          <a href="http://www.arrigonisposi.com" target="_blank" rel="noopener" class="suppliers__link" aria-label="Website"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a>
+          <a href="https://www.instagram.com/arrigonisposicrema" target="_blank" rel="noopener" class="suppliers__link" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+      </div>
+
+      <div class="suppliers__card reveal-up">
+        <p class="suppliers__category"><span class="lang-en">Hair &amp; Makeup</span><span class="lang-it">Capelli &amp; Make-up</span></p>
+        <p class="suppliers__name"><a href="https://www.arteliberaparrucchieri.it" target="_blank" rel="noopener">Arte Libera</a></p>
+        <div class="suppliers__links">
+          <a href="https://www.arteliberaparrucchieri.it" target="_blank" rel="noopener" class="suppliers__link" aria-label="Website"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a>
+          <a href="https://www.instagram.com/artelibera_parrucchieri" target="_blank" rel="noopener" class="suppliers__link" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -975,6 +1095,36 @@
           }
         });
       }
+    })();
+
+    /* ====================================================
+       REGISTRY — IBAN toggle + copy
+       ==================================================== */
+    (function () {
+      var giftBtn   = document.getElementById('registryGiftBtn');
+      var ibanPanel = document.getElementById('registryIbanPanel');
+
+      if (giftBtn && ibanPanel) {
+        giftBtn.addEventListener('click', function () {
+          var open = ibanPanel.classList.toggle('visible');
+          giftBtn.setAttribute('aria-expanded', String(open));
+        });
+      }
+
+      document.querySelectorAll('.registry__iban-copy').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var el = document.getElementById(btn.getAttribute('data-target'));
+          if (!el) return;
+          navigator.clipboard.writeText(el.textContent.trim()).then(function () {
+            var lang = document.documentElement.getAttribute('data-lang') || 'en';
+            var saved = btn.innerHTML;
+            btn.innerHTML = lang === 'it'
+              ? '<span class="lang-it">Copiato!</span>'
+              : '<span class="lang-en">Copied!</span>';
+            setTimeout(function () { btn.innerHTML = saved; }, 2000);
+          });
+        });
+      });
     })();
   </script>
 
