@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <html lang="en" data-lang="en">
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="Styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Josefin+Sans:wght@300;400;500;600&family=Dancing+Script:wght@400;500;600;700&family=Fleur+De+Leah&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Josefin+Sans:wght@300;400;500;600&family=Dancing+Script:wght@400;500;600;700&family=Fleur+De+Leah&family=Oswald:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -92,10 +92,49 @@
         <span class="lang-it">Sabato · 5 Settembre 2026 · ore 16</span>
       </p>
       <p class="hero__venue fade-up delay-3">Agriturismo da Pippo &middot; Piazza Grassi 3, Cassignanica &ndash; MI</p>
+      <a href="#rsvp" class="btn btn--outline hero__cta fade-up delay-4">RSVP</a>
     </div>
     <div class="hero__scroll">
       <span>Scroll</span>
       <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===================== SAVE THE DATE ===================== -->
+  <section class="save-date" id="save-date">
+    <span class="save-date__vertical" aria-hidden="true">
+      <span class="lang-en">Save the Date</span>
+      <span class="lang-it">Segna la Data</span>
+    </span>
+    <div class="save-date__inner reveal-up">
+      <div class="save-date__monogram">
+        <span class="save-date__mono-letter">M</span>
+        <span class="save-date__mono-amp">&amp;</span>
+        <span class="save-date__mono-letter">A</span>
+      </div>
+      <div class="save-date__line"></div>
+      <div class="save-date__stack">
+        <span class="save-date__num save-date__num--day">05</span>
+        <span class="save-date__num save-date__num--month">
+          <span class="lang-en">SEP</span>
+          <span class="lang-it">SET</span>
+        </span>
+        <span class="save-date__num save-date__num--year">2026</span>
+      </div>
+      <div class="save-date__line save-date__line--bottom"></div>
+      <div class="save-date__couple">
+        <span class="save-date__name">Marta</span>
+        <span class="save-date__amp">&amp;</span>
+        <span class="save-date__name">Anurag</span>
+      </div>
+      <p class="save-date__sub">
+        <span class="lang-en">Agriturismo da Pippo · Cassignanica, Italy</span>
+        <span class="lang-it">Agriturismo da Pippo · Cassignanica, Italia</span>
+      </p>
+      <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Marta+%26+Anurag+Wedding&dates=20260905T140000Z%2F20260905T220000Z&details=Agriturismo+da+Pippo%2C+Piazza+Grassi+3%2C+Cassignanica+MI&location=Piazza+Grassi+3%2C+Cassignanica+MI%2C+Italy" target="_blank" rel="noopener" class="btn btn--outline save-date__btn">
+        <span class="lang-en">Add to Calendar</span>
+        <span class="lang-it">Aggiungi al Calendario</span>
+      </a>
     </div>
   </section>
 
@@ -107,28 +146,52 @@
     </p>
     <div class="countdown__timer" id="countdownTimer">
       <div class="countdown__block">
-        <span class="countdown__number" id="cdDays">000</span>
+        <div class="countdown__card" id="cdDaysCard">
+          <span class="countdown__number" id="cdDays">00</span>
+          <div class="countdown__flip" aria-hidden="true">
+            <div class="countdown__flip-half countdown__flip-top"><span id="cdDaysOld">00</span></div>
+            <div class="countdown__flip-half countdown__flip-bottom"><span id="cdDaysNew">00</span></div>
+          </div>
+        </div>
         <span class="countdown__unit">
           <span class="lang-en">Days</span><span class="lang-it">Giorni</span>
         </span>
       </div>
       <div class="countdown__sep">&middot;</div>
       <div class="countdown__block">
-        <span class="countdown__number" id="cdHours">00</span>
+        <div class="countdown__card" id="cdHoursCard">
+          <span class="countdown__number" id="cdHours">00</span>
+          <div class="countdown__flip" aria-hidden="true">
+            <div class="countdown__flip-half countdown__flip-top"><span id="cdHoursOld">00</span></div>
+            <div class="countdown__flip-half countdown__flip-bottom"><span id="cdHoursNew">00</span></div>
+          </div>
+        </div>
         <span class="countdown__unit">
           <span class="lang-en">Hours</span><span class="lang-it">Ore</span>
         </span>
       </div>
       <div class="countdown__sep">&middot;</div>
       <div class="countdown__block">
-        <span class="countdown__number" id="cdMins">00</span>
+        <div class="countdown__card" id="cdMinsCard">
+          <span class="countdown__number" id="cdMins">00</span>
+          <div class="countdown__flip" aria-hidden="true">
+            <div class="countdown__flip-half countdown__flip-top"><span id="cdMinsOld">00</span></div>
+            <div class="countdown__flip-half countdown__flip-bottom"><span id="cdMinsNew">00</span></div>
+          </div>
+        </div>
         <span class="countdown__unit">
           <span class="lang-en">Minutes</span><span class="lang-it">Minuti</span>
         </span>
       </div>
       <div class="countdown__sep">&middot;</div>
       <div class="countdown__block">
-        <span class="countdown__number" id="cdSecs">00</span>
+        <div class="countdown__card" id="cdSecsCard">
+          <span class="countdown__number" id="cdSecs">00</span>
+          <div class="countdown__flip" aria-hidden="true">
+            <div class="countdown__flip-half countdown__flip-top"><span id="cdSecsOld">00</span></div>
+            <div class="countdown__flip-half countdown__flip-bottom"><span id="cdSecsNew">00</span></div>
+          </div>
+        </div>
         <span class="countdown__unit">
           <span class="lang-en">Seconds</span><span class="lang-it">Secondi</span>
         </span>
@@ -151,7 +214,7 @@
     <div class="story__content">
       <div class="story__image-col reveal-left">
         <div class="story__image-frame">
-          <img src="image15.jpeg" alt="Our story">
+          <img src="hero_image.jpeg" alt="Our story">
         </div>
       </div>
       <div class="story__text-col reveal-right">
@@ -177,69 +240,13 @@
     </section>
 
   <!-- ===================== PHOTO STRIP ===================== -->
-  <!--
-    ADDING MORE IMAGES: add new items in BOTH the original and duplicate blocks
-    of EACH row, keeping the two blocks identical within each row.
-    Row 2 deliberately starts mid-sequence for visual offset.
-    If the scroll feels too fast/slow after adding images, tune the
-    animation-duration values in Styles.css (.photo-strip__track--left/right).
-  -->
   <section class="photo-strip">
 
-    <!-- Row 1 — scrolls left -->
     <div class="photo-strip__track photo-strip__track--left">
-      <div class="photo-strip__reel">
-        <!-- original set -->
-        <div class="photo-strip__item"><img src="image1.jpeg" alt=""></div>
-        <div class="photo-strip__item"><img src="image2.jpeg" alt=""></div>
-        <div class="photo-strip__item"><img src="image3.jpeg" alt=""></div>
-        <div class="photo-strip__item"><img src="image4.jpeg" alt=""></div>
-        <div class="photo-strip__item"><img src="image9.jpeg" alt=""></div>
-        <div class="photo-strip__item"><img src="image10.jpeg" alt=""></div>
-        <div class="photo-strip__item"><img src="image11.jpeg" alt=""></div>
-        <div class="photo-strip__item"><img src="image12.jpeg" alt=""></div>
-        <div class="photo-strip__item"><img src="image13.jpeg" alt=""></div>
-        <div class="photo-strip__item"><img src="image14.jpeg" alt=""></div>
-        <!-- duplicate set — keep in sync with original set above -->
-        <div class="photo-strip__item" aria-hidden="true"><img src="image1.jpeg" alt=""></div>
-        <div class="photo-strip__item" aria-hidden="true"><img src="image2.jpeg" alt=""></div>
-        <div class="photo-strip__item" aria-hidden="true"><img src="image3.jpeg" alt=""></div>
-        <div class="photo-strip__item" aria-hidden="true"><img src="image4.jpeg" alt=""></div>
-        <div class="photo-strip__item" aria-hidden="true"><img src="image9.jpeg" alt=""></div>
-        <div class="photo-strip__item" aria-hidden="true"><img src="image10.jpeg" alt=""></div>
-        <div class="photo-strip__item" aria-hidden="true"><img src="image11.jpeg" alt=""></div>
-        <div class="photo-strip__item" aria-hidden="true"><img src="image12.jpeg" alt=""></div>
-        <div class="photo-strip__item" aria-hidden="true"><img src="image13.jpeg" alt=""></div>
-        <div class="photo-strip__item" aria-hidden="true"><img src="image14.jpeg" alt=""></div>
-      </div>
+      <div class="photo-strip__reel"></div>
     </div>
-
-    <!-- Row 2 — scrolls right, starts offset -->
     <div class="photo-strip__track photo-strip__track--right">
-      <div class="photo-strip__reel">
-        <!-- original set (offset start — begins mid-sequence for visual variety) -->
-        <div class="photo-strip__item"><img src="image9.jpeg" alt=""></div>
-        <div class="photo-strip__item"><img src="image10.jpeg" alt=""></div>
-        <div class="photo-strip__item"><img src="image11.jpeg" alt=""></div>
-        <div class="photo-strip__item"><img src="image12.jpeg" alt=""></div>
-        <div class="photo-strip__item"><img src="image13.jpeg" alt=""></div>
-        <div class="photo-strip__item"><img src="image14.jpeg" alt=""></div>
-        <div class="photo-strip__item"><img src="image1.jpeg" alt=""></div>
-        <div class="photo-strip__item"><img src="image2.jpeg" alt=""></div>
-        <div class="photo-strip__item"><img src="image3.jpeg" alt=""></div>
-        <div class="photo-strip__item"><img src="image4.jpeg" alt=""></div>
-        <!-- duplicate set — keep in sync with original set above -->
-        <div class="photo-strip__item" aria-hidden="true"><img src="image9.jpeg" alt=""></div>
-        <div class="photo-strip__item" aria-hidden="true"><img src="image10.jpeg" alt=""></div>
-        <div class="photo-strip__item" aria-hidden="true"><img src="image11.jpeg" alt=""></div>
-        <div class="photo-strip__item" aria-hidden="true"><img src="image12.jpeg" alt=""></div>
-        <div class="photo-strip__item" aria-hidden="true"><img src="image13.jpeg" alt=""></div>
-        <div class="photo-strip__item" aria-hidden="true"><img src="image14.jpeg" alt=""></div>
-        <div class="photo-strip__item" aria-hidden="true"><img src="image1.jpeg" alt=""></div>
-        <div class="photo-strip__item" aria-hidden="true"><img src="image2.jpeg" alt=""></div>
-        <div class="photo-strip__item" aria-hidden="true"><img src="image3.jpeg" alt=""></div>
-        <div class="photo-strip__item" aria-hidden="true"><img src="image4.jpeg" alt=""></div>
-      </div>
+      <div class="photo-strip__reel"></div>
     </div>
 
   </section>
@@ -521,82 +528,134 @@
 
   <!-- ===================== RSVP ===================== -->
   <section class="rsvp" id="rsvp">
-    <div class="section-header">
-      <span class="section-header__tag">
-        <span class="lang-en">Reply</span>
-        <span class="lang-it">Rispondi</span>
-      </span>
-      <h2 class="section-header__title">RSVP</h2>
-    </div>
-    <p class="rsvp__subtitle">
-      <span class="lang-en">Kindly respond by August 5, 2026</span>
-      <span class="lang-it">Si richiede gentile conferma entro il 5 Agosto 2026</span>
-    </p>
-    <form class="rsvp__form" id="rsvpForm" action="https://formspree.io/f/xkopjvan" method="POST">
-      <div class="form__group">
-        <label for="rsvpName">
-          <span class="lang-en">Full Name</span>
-          <span class="lang-it">Nome e Cognome</span>
-        </label>
-        <input type="text" id="rsvpName" name="name" required>
+    <div class="rsvp__inner">
+      <div class="section-header">
+        <span class="section-header__tag">
+          <span class="lang-en">Please reply by 5 August 2026</span>
+          <span class="lang-it">Conferma entro il 5 Agosto 2026</span>
+        </span>
+        <h2 class="section-header__title">RSVP</h2>
       </div>
-      <div class="form__group">
-        <label for="rsvpEmail">Email</label>
-        <input type="email" id="rsvpEmail" name="email" required>
-      </div>
-      <div class="form__group">
-        <label>
-          <span class="lang-en">Will you be attending?</span>
-          <span class="lang-it">Parteciperai?</span>
-        </label>
-        <div class="form__radio-group">
-          <label class="form__radio">
-            <input type="radio" name="attending" value="yes" required>
-            <span>
-              <span class="lang-en">Joyfully Accepts</span>
-              <span class="lang-it">Con gioia, accetto</span>
-            </span>
-          </label>
-          <label class="form__radio">
-            <input type="radio" name="attending" value="no">
-            <span>
-              <span class="lang-en">Regretfully Declines</span>
-              <span class="lang-it">Purtroppo, declino</span>
-            </span>
-          </label>
+      <div class="rsvp__invitation">
+        <p class="rsvp__invitation-lead">
+          <span class="lang-en">There is a seat with your name on it.<br>We hope you'll join us.</span>
+          <span class="lang-it">C'è un posto con il tuo nome.<br>Speriamo di vederti con noi.</span>
+        </p>
+        <div class="rsvp__deadline">
+          <span class="lang-en">Kindly respond by <strong>5 July 2026</strong></span>
+          <span class="lang-it">Conferma entro il <strong>5 Luglio 2026</strong></span>
         </div>
       </div>
-      <div class="form__group">
-        <label for="rsvpGuests">
-          <span class="lang-en">Number of Guests</span>
-          <span class="lang-it">Numero di Ospiti</span>
-        </label>
-        <select id="rsvpGuests" name="guests">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-        </select>
+
+      <!-- Success state -->
+      <div class="rsvp__success" id="rsvpSuccess" role="status">
+        <div class="rsvp__success-monogram">
+          <span>M</span><span class="rsvp__success-amp">&amp;</span><span>A</span>
+        </div>
+        <h3 class="rsvp__success-title" id="rsvpSuccessTitle">
+          <span class="lang-en">Thank you!</span>
+          <span class="lang-it">Grazie!</span>
+        </h3>
+        <p class="rsvp__success-text">
+          <span class="lang-en">Your RSVP has been received. We can't wait to celebrate with you!</span>
+          <span class="lang-it">Il tuo RSVP è stato ricevuto. Non vediamo l'ora di festeggiare con te!</span>
+        </p>
+        <p class="rsvp__success-date">05 &middot; 09 &middot; 2026</p>
       </div>
-      <div class="form__group">
-        <label for="rsvpDiet">
-          <span class="lang-en">Dietary Requirements</span>
-          <span class="lang-it">Esigenze Alimentari</span>
-        </label>
-        <textarea id="rsvpDiet" name="dietary" rows="3"></textarea>
-      </div>
-      <div class="form__group">
-        <label for="rsvpSong">
-          <span class="lang-en">Song Request</span>
-          <span class="lang-it">Richiesta Musicale</span>
-        </label>
-        <input type="text" id="rsvpSong" name="song">
-      </div>
-      <button type="submit" class="btn btn--primary">
-        <span class="lang-en">Send RSVP</span>
-        <span class="lang-it">Invia RSVP</span>
-      </button>
-    </form>
+
+      <form class="rsvp__form" id="rsvpForm" action="https://formspree.io/f/xkopjvan" method="POST">
+        <div class="rsvp__row">
+          <div class="form__group">
+            <label for="rsvpName">
+              <span class="lang-en">Full Name</span>
+              <span class="lang-it">Nome e Cognome</span>
+            </label>
+            <input type="text" id="rsvpName" name="name" required>
+          </div>
+          <div class="form__group">
+            <label for="rsvpEmail">Email</label>
+            <input type="email" id="rsvpEmail" name="email" required>
+          </div>
+        </div>
+        <div class="form__group">
+          <label>
+            <span class="lang-en">Will you be attending?</span>
+            <span class="lang-it">Parteciperai?</span>
+          </label>
+          <div class="form__radio-group">
+            <label class="form__radio">
+              <input type="radio" name="attending" value="yes" required>
+              <span>
+                <span class="lang-en">Joyfully Accepts</span>
+                <span class="lang-it">Con gioia, accetto</span>
+              </span>
+            </label>
+            <label class="form__radio">
+              <input type="radio" name="attending" value="no">
+              <span>
+                <span class="lang-en">Regretfully Declines</span>
+                <span class="lang-it">Purtroppo, declino</span>
+              </span>
+            </label>
+          </div>
+        </div>
+        <div class="rsvp__conditional" id="rsvpConditionalFields">
+          <div class="form__group">
+            <label for="rsvpGuests">
+              <span class="lang-en">Number of Guests</span>
+              <span class="lang-it">Numero di Ospiti</span>
+            </label>
+            <select id="rsvpGuests" name="guests">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+          <div class="form__group">
+            <label for="rsvpDiet">
+              <span class="lang-en">Dietary Requirements</span>
+              <span class="lang-it">Esigenze Alimentari</span>
+            </label>
+            <select id="rsvpDiet" name="dietary">
+              <option value="" data-en="No dietary requirements" data-it="Nessuna esigenza alimentare">No dietary requirements</option>
+              <option value="vegetarian" data-en="Vegetarian" data-it="Vegetariano/a">Vegetarian</option>
+              <option value="vegan" data-en="Vegan" data-it="Vegano/a">Vegan</option>
+              <option value="gluten-free" data-en="Gluten-Free" data-it="Senza glutine">Gluten-Free</option>
+              <option value="dairy-free" data-en="Dairy-Free" data-it="Senza latticini">Dairy-Free</option>
+              <option value="nut-allergy" data-en="Nut Allergy" data-it="Allergia alle noci">Nut Allergy</option>
+              <option value="halal" data-en="Halal" data-it="Halal">Halal</option>
+              <option value="kosher" data-en="Kosher" data-it="Kosher">Kosher</option>
+              <option value="other" data-en="Other (please specify)" data-it="Altro (specifica)">Other (please specify)</option>
+            </select>
+          </div>
+          <div class="form__group" id="rsvpDietOtherGroup" style="display:none;">
+            <label for="rsvpDietOther">
+              <span class="lang-en">Please specify</span>
+              <span class="lang-it">Specifica</span>
+            </label>
+            <input type="text" id="rsvpDietOther" name="dietary_other">
+          </div>
+          <div class="form__group">
+            <label for="rsvpSong">
+              <span class="lang-en">Song Request</span>
+              <span class="lang-it">Richiesta Musicale</span>
+            </label>
+            <input type="text" id="rsvpSong" name="song">
+          </div>
+        </div>
+        <div class="rsvp__form-footer">
+          <button type="submit" class="btn btn--primary" id="rsvpSubmitBtn">
+            <span class="lang-en">Send RSVP</span>
+            <span class="lang-it">Invia RSVP</span>
+          </button>
+          <p class="rsvp__error" id="rsvpError" role="alert">
+            <span class="lang-en">Something went wrong — please try again.</span>
+            <span class="lang-it">Qualcosa è andato storto — riprova.</span>
+          </p>
+        </div>
+      </form>
+    </div>
   </section>
 
   <!-- ===================== FOOTER ===================== -->
@@ -612,21 +671,69 @@
 
   <script>
     /* ====================================================
+       PHOTO STRIP — add new filenames here, drop the file
+       in the same folder, and it appears automatically.
+       Odd-indexed → top row (scrolls left)
+       Even-indexed → bottom row (scrolls right)
+       ==================================================== */
+    var photos = [
+      'image1.jpeg',
+      'image2.jpeg',
+      'image3.jpeg',
+      'image4.jpeg',
+      'image9.jpeg',
+      'image10.jpeg',
+      'image11.jpeg',
+      'image12.jpeg',
+      'image13.jpeg',
+      'image14.jpeg',
+      'image15.jpeg',
+      'image16.jpeg',
+      'image17.jpeg',
+      'image18.jpeg',
+    ];
+
+    (function buildPhotoStrip() {
+      var tracks = document.querySelectorAll('.photo-strip__track');
+      if (!tracks.length) return;
+      var row1 = photos.filter(function(_, i) { return i % 2 === 0; });
+      var row2 = photos.filter(function(_, i) { return i % 2 !== 0; });
+      [row1, row2].forEach(function(images, ti) {
+        var reel = tracks[ti] && tracks[ti].querySelector('.photo-strip__reel');
+        if (!reel || !images.length) return;
+        reel.innerHTML = '';
+        images.concat(images).forEach(function(src, i) {
+          var item = document.createElement('div');
+          item.className = 'photo-strip__item';
+          if (i >= images.length) item.setAttribute('aria-hidden', 'true');
+          var img = document.createElement('img');
+          img.src = src;
+          img.alt = '';
+          item.appendChild(img);
+          reel.appendChild(item);
+        });
+      });
+    })();
+
+    /* ====================================================
        LANGUAGE TOGGLE
        ==================================================== */
     function setLang(lang) {
       document.documentElement.setAttribute('data-lang', lang);
       document.documentElement.lang = lang === 'it' ? 'it' : 'en';
       const placeholders = {
-        rsvpName:  { en: 'Your name', it: 'Il tuo nome' },
-        rsvpEmail: { en: 'your@email.com', it: 'tua@email.com' },
-        rsvpDiet:  { en: 'Let us know of any dietary needs', it: 'Facci sapere di eventuali esigenze alimentari' },
-        rsvpSong:  { en: 'What song gets you on the dance floor?', it: 'Quale canzone ti fa ballare?' }
+        rsvpName:        { en: 'Your name', it: 'Il tuo nome' },
+        rsvpEmail:       { en: 'your@email.com', it: 'tua@email.com' },
+        rsvpDietOther:   { en: 'Please describe your dietary needs', it: 'Descrivi le tue esigenze alimentari' },
+        rsvpSong:        { en: 'What song gets you on the dance floor?', it: 'Quale canzone ti fa ballare?' }
       };
       for (const [id, texts] of Object.entries(placeholders)) {
         const el = document.getElementById(id);
         if (el) el.placeholder = texts[lang];
       }
+      document.querySelectorAll('#rsvpDiet option[data-en]').forEach(function (opt) {
+        opt.textContent = opt.getAttribute('data-' + lang) || opt.textContent;
+      });
       document.querySelectorAll('.lang-toggle').forEach(btn => {
         btn.querySelector('.lang-toggle__opt--en').classList.toggle('active', lang === 'en');
         btn.querySelector('.lang-toggle__opt--it').classList.toggle('active', lang === 'it');
@@ -653,32 +760,53 @@
     })();
 
     /* ====================================================
-       COUNTDOWN with tick animation on change
+       COUNTDOWN — split-flap with flip animation on change
        ==================================================== */
     const weddingDate = new Date('2026-09-05T16:00:00').getTime();
     const cd = {
-      days:  { el: document.getElementById('cdDays'),  prev: null },
-      hours: { el: document.getElementById('cdHours'), prev: null },
-      mins:  { el: document.getElementById('cdMins'),  prev: null },
-      secs:  { el: document.getElementById('cdSecs'),  prev: null },
+      days:  { num: document.getElementById('cdDays'),  card: document.getElementById('cdDaysCard'),  oldEl: document.getElementById('cdDaysOld'),  newEl: document.getElementById('cdDaysNew'),  prev: null },
+      hours: { num: document.getElementById('cdHours'), card: document.getElementById('cdHoursCard'), oldEl: document.getElementById('cdHoursOld'), newEl: document.getElementById('cdHoursNew'), prev: null },
+      mins:  { num: document.getElementById('cdMins'),  card: document.getElementById('cdMinsCard'),  oldEl: document.getElementById('cdMinsOld'),  newEl: document.getElementById('cdMinsNew'),  prev: null },
+      secs:  { num: document.getElementById('cdSecs'),  card: document.getElementById('cdSecsCard'),  oldEl: document.getElementById('cdSecsOld'),  newEl: document.getElementById('cdSecsNew'),  prev: null },
     };
+
     function setCD(key, value, pad) {
       const str = String(value).padStart(pad, '0');
-      if (cd[key].prev !== str) {
-        cd[key].el.textContent = str;
-        if (cd[key].prev !== null) {
-          cd[key].el.classList.remove('tick');
-          // Force reflow so the animation restarts
-          void cd[key].el.offsetWidth;
-          cd[key].el.classList.add('tick');
-        }
-        cd[key].prev = str;
+      const slot = cd[key];
+      if (slot.prev === str) return;
+
+      if (slot.prev === null) {
+        // First paint — no animation
+        slot.num.textContent = str;
+        slot.oldEl.textContent = str;
+        slot.newEl.textContent = str;
+        slot.prev = str;
+        return;
       }
+
+      // Set up the flip: top half shows OLD value, bottom half shows NEW value
+      slot.oldEl.textContent = slot.prev;
+      slot.newEl.textContent = str;
+      // The static number underneath updates IMMEDIATELY, so the card behind
+      // the flap is already correct before the flip finishes.
+      slot.num.textContent = str;
+      slot.card.classList.remove('flipping');
+      void slot.card.offsetWidth; // reflow to restart animation
+      slot.card.classList.add('flipping');
+
+      // After the flip finishes, sync the top half and remove the flipping class
+      setTimeout(() => {
+        slot.oldEl.textContent = str;
+        slot.card.classList.remove('flipping');
+      }, 480);
+
+      slot.prev = str;
     }
+
     function updateCountdown() {
       const diff = weddingDate - Date.now();
       if (diff <= 0) return;
-      setCD('days',  Math.floor(diff / 86400000),                3);
+      setCD('days',  Math.floor(diff / 86400000),                2);
       setCD('hours', Math.floor((diff % 86400000) / 3600000),    2);
       setCD('mins',  Math.floor((diff % 3600000) / 60000),       2);
       setCD('secs',  Math.floor((diff % 60000) / 1000),          2);
@@ -785,18 +913,69 @@
     }
 
     /* ====================================================
-       RSVP SUBMIT — gentle feedback
+       RSVP — attendance toggle + async submit
        ==================================================== */
-    const rsvpForm = document.getElementById('rsvpForm');
-    if (rsvpForm) {
-      rsvpForm.addEventListener('submit', (e) => {
-        const btn = rsvpForm.querySelector('button[type="submit"]');
-        if (btn) {
-          btn.style.opacity = '0.6';
-          btn.style.pointerEvents = 'none';
-        }
+    (function () {
+      const rsvpForm        = document.getElementById('rsvpForm');
+      const rsvpConditional = document.getElementById('rsvpConditionalFields');
+      const rsvpSuccess     = document.getElementById('rsvpSuccess');
+      const rsvpError       = document.getElementById('rsvpError');
+      const rsvpSubmitBtn   = document.getElementById('rsvpSubmitBtn');
+
+      document.querySelectorAll('input[name="attending"]').forEach(function (radio) {
+        radio.addEventListener('change', function () {
+          if (rsvpConditional) {
+            rsvpConditional.classList.toggle('hidden', this.value !== 'yes');
+          }
+        });
       });
-    }
+
+      var rsvpDietSel = document.getElementById('rsvpDiet');
+      var rsvpDietOtherGroup = document.getElementById('rsvpDietOtherGroup');
+      if (rsvpDietSel && rsvpDietOtherGroup) {
+        rsvpDietSel.addEventListener('change', function () {
+          rsvpDietOtherGroup.style.display = this.value === 'other' ? 'block' : 'none';
+        });
+      }
+
+      if (rsvpForm) {
+        rsvpForm.addEventListener('submit', async function (e) {
+          e.preventDefault();
+          if (rsvpSubmitBtn) { rsvpSubmitBtn.style.opacity = '0.6'; rsvpSubmitBtn.style.pointerEvents = 'none'; }
+          if (rsvpError) rsvpError.classList.remove('visible');
+
+          try {
+            const res = await fetch(rsvpForm.action, {
+              method: 'POST',
+              body: new FormData(rsvpForm),
+              headers: { 'Accept': 'application/json' }
+            });
+            if (res.ok) {
+              const firstName = (document.getElementById('rsvpName').value || '').trim().split(' ')[0];
+              if (firstName) {
+                const titleEl = document.getElementById('rsvpSuccessTitle');
+                if (titleEl) {
+                  const enSpan = titleEl.querySelector('.lang-en');
+                  const itSpan = titleEl.querySelector('.lang-it');
+                  if (enSpan) enSpan.textContent = 'Thank you, ' + firstName + '!';
+                  if (itSpan) itSpan.textContent = 'Grazie, ' + firstName + '!';
+                }
+              }
+              rsvpForm.style.display = 'none';
+              if (rsvpSuccess) {
+                rsvpSuccess.classList.add('visible');
+                rsvpSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              }
+            } else {
+              throw new Error('Server error');
+            }
+          } catch (err) {
+            if (rsvpSubmitBtn) { rsvpSubmitBtn.style.opacity = ''; rsvpSubmitBtn.style.pointerEvents = ''; }
+            if (rsvpError) rsvpError.classList.add('visible');
+          }
+        });
+      }
+    })();
   </script>
 
 </body>
