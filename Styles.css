@@ -1640,7 +1640,7 @@ img { max-width: 100%; display: block; }
   transition: max-height 0.9s var(--ease-romance), opacity 0.7s var(--ease-romance);
 }
 .registry__iban-panel.visible {
-  max-height: 400px;
+  max-height: 700px;
   opacity: 1;
 }
 .registry__iban-cards {
