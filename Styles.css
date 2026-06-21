@@ -1489,7 +1489,12 @@ img { max-width: 100%; display: block; }
   border-radius: 4px;
   text-align: center;
   position: relative;
+  display: flex;
+  flex-direction: column;
   transition: transform 0.8s var(--ease-romance), box-shadow 0.8s var(--ease-romance);
+}
+.travel__card .btn {
+  margin-top: auto;
 }
 .travel__card::before {
   content: '';
